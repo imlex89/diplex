@@ -1,1 +1,29 @@
-let ibg=document.querySelector(".ibg"),img=ibg.querySelector("img").getAttribute("src");ibg.setAttribute("style","background-image:url("+img+")");let btn=document.querySelector(".btn-burger"),menu=document.querySelector(".mobileMenu"),flag=!0;btn.onclick=()=>{flag?(btn.classList.add("active"),menu.classList.add("showMenu")):(btn.classList.remove("active"),menu.classList.remove("showMenu")),flag=!flag};
+let ibg = document.querySelector(".ibg");
+let img = ibg.querySelector("img").getAttribute("src");
+ibg.setAttribute("style", "background-image:url(" + img + ")");
+
+let btn = document.querySelector(".btn-burger");
+let menu = document.querySelector(".mobileMenu");
+let flag = true;
+
+btn.onclick = () => {
+	if (flag) {
+		btn.classList.add("active");
+		menu.classList.add("showMenu");
+	} else {
+		btn.classList.remove("active");
+		menu.classList.remove("showMenu");
+	}
+	flag = !flag;
+};
+
+let on = true;
+
+function onClick(e) {
+  if (on) {
+    e.classList.add("active");
+  } else {
+    e.classList.remove("active");
+  }
+  on = !on;
+}
