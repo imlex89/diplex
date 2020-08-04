@@ -1,0 +1,63 @@
+.how {
+	background-image: url('/img/howtowork.jpg');
+	position: relative;
+    top: -136px;
+	&__body {
+		@include jcw(space-between, $c, $w);
+		width: 100%;
+		max-width: 1182px;
+		margin: 0 auto;
+		button {
+			width: 276px;
+			height: 51px;
+			background: #FFFFFF;
+			font-weight: bold;
+			font-size: 23px;
+			line-height: 30px;
+			color: #009AAE;
+			margin: 0 auto;
+			top: -15px;
+    		position: relative;
+    		margin-bottom: 150px;
+		}
+	}
+	&__column {
+		@include jcw(flex-start, $c, $w);
+		background: rgba(0, 0, 0, 0.15);
+		padding: 23px 34px 44px 26px;
+		width: 365px;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 31px;
+		color: #FFFFFF;
+		h3 {
+			margin-top: 13px;
+		}
+		p {
+			margin-top: 28px;
+		}
+		div {
+			width: 100%;
+		}
+		span {
+			font-weight: bold;
+			font-size: 42px;
+			line-height: 54px;
+			text-align: center;
+			color: rgba(255, 255, 255, 0.56);
+		}
+	}
+	h2 {
+		padding-top: 122px;
+		font-weight: bold;
+		font-size: 42px;
+		line-height: 54px;
+		text-align: center;
+		color: #FFFFFF;
+		margin-bottom: 40px;
+	}
+}
+.rectangle3 {
+	position: relative;
+    z-index: 1;
+}

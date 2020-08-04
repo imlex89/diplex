@@ -1,0 +1,112 @@
+.clients {
+	background: #ECECEC;
+	padding-bottom: 204px;
+	top: -275px;
+    position: relative;
+	&__body {
+		@include jcw(space-between, $c, $w);
+		width: 100%;
+		max-width: 1442px;
+		margin: 0 auto;
+		margin-top: 55px;
+	}
+	&__arrow {
+	}
+	&__client {
+		background: #FFFFFF;
+		width: 363px;
+		text-align: center;
+		padding: 0 41px;
+		position: relative;
+    	top: 4rem;
+    	img {
+			position: relative;
+			top: -4rem;
+			margin-bottom: -4rem;
+    	}
+		h4 {
+			font-weight: bold;
+			font-size: 24px;
+			line-height: 31px;
+			color: #008AA8;
+			margin-top: 25px;
+		}
+		p {
+			font-size: 18px;
+			line-height: 23px;
+			color: #4B4B4B;
+			margin-top: 30px;
+		}
+	}
+	&__stars {
+		margin-top: 50px;
+	}
+	&__circles {
+		@include jcw($j, $c, $w);
+		position: relative;
+		top: 7rem;
+		div {
+			width: 18px;
+			height: 18px;
+			background: #C4C4C4;
+			margin: 0 17.5px;
+			border-radius: 50%;
+			&:nth-of-type(2) {
+				background: #009AAE;
+			}
+		}
+	}
+	.container {
+		width: 1442px;
+		h2 {
+			margin-left: 6rem;
+			padding-top: 78px;
+		}
+	}
+}
+.rectangle4 {
+	position: relative;
+    top: -273px;
+}
+.rectangle5 {
+	position: relative;
+    top: -276px;
+}
+
+@media (max-width: 1200px) {
+	.clients {
+		&__client {
+			background: #FFFFFF;
+			width: 25%;
+			text-align: center;
+			padding: 0 20px;
+			position: relative;
+	    	top: 4rem;
+	    	img {
+				position: relative;
+				top: -4rem;
+				margin-bottom: -4rem;
+	    	}
+			h4 {
+				font-weight: bold;
+				font-size: 24px;
+				line-height: 31px;
+				color: #008AA8;
+				margin-top: 25px;
+			}
+			p {
+				font-size: 18px;
+				line-height: 23px;
+				color: #4B4B4B;
+				margin-top: 30px;
+			}
+		}
+		.container {
+		    width: 100%;
+		}
+	}
+}
+@media (max-width: 992px) {
+}
+@media (max-width: 767px) {
+}

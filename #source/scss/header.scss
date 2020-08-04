@@ -1,0 +1,172 @@
+$j: center;
+$c: center;
+$w: wrap;
+
+@mixin jcw($j, $c, $w) {
+  display: flex;
+  justify-content: $j;
+  align-items: $c;
+  flex-wrap: $w;
+}
+
+.btn-burger {
+	display: none;
+	position: relative;
+	background: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    span {
+		position: absolute;
+	    right: 0;
+	    left: 0;
+	    margin: 0 auto;
+		background: #000;
+		width: 35px;
+		height: 2px;
+		-webkit-transition: 0.1s ease-out 0.1s;
+	    -moz-transition: 0.1s ease-out 0.1s;
+	    -o-transition: 0.1s ease-out 0.1s;
+	    transition: 0.1s ease-out 0.1s;
+		&:first-child {
+			margin-top: -10px;
+		}
+		&:last-child {
+			margin-top: 10px;
+		}
+	}
+}
+.active {
+	span {
+		&:first-child,
+	    &:last-child {
+	    	margin: 0;
+	    }
+		&:first-child {
+			-moz-transform: rotate(45deg);
+		    -ms-transform: rotate(45deg);
+		    -webkit-transform: rotate(45deg);
+		    -o-transform: rotate(45deg);
+		    transform: rotate(45deg);
+		}
+		&:last-child {
+			-moz-transform: rotate(-45deg);
+		    -ms-transform: rotate(-45deg);
+		    -webkit-transform: rotate(-45deg);
+		    -o-transform: rotate(-45deg);
+		    transform: rotate(-45deg);
+		}
+		&:nth-child(2) {
+			width: 0;
+		}
+	}  
+}
+.mobile {
+	display: none;
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 100px;
+    background: rgba(255, 255, 255, .9);
+    z-index: 2;
+    padding: 20px;
+}
+.header {
+	background: #FFFFFF;
+	box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+	font-size: 16px;
+	line-height: 21px;
+	text-transform: uppercase;
+	padding: 20px 0;
+	&__body {
+		@include jcw(space-between, $c, $w);
+		ul {
+			@include jcw(space-between, $c, $w);
+			width: 506px;
+			li {
+				a {
+					color: #000000;
+				}
+			}
+		}
+		button {
+			@include jcw(space-evenly, $c, $w);
+			margin-left: 32px;
+			text-transform: uppercase;
+			background: #FFFFFF;
+			border: 1px solid #9E9E9E;
+			box-sizing: border-box;
+			width: 106px;
+    		height: 30px;
+		}
+	}
+	&__logo {
+		margin-left: 381px;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__menu {
+		@include jcw(space-between, $c, $w);
+		margin-right: 338px;
+	}	
+}
+.mobileMenu {
+	display: none;
+	background: #FFFFFF;
+	box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.25);
+	font-family: 'PT Sans';
+	font-size: 16px;
+	line-height: 21px;
+	text-transform: uppercase;
+	padding: 1rem 2rem;
+	ul {
+		li {
+			padding-bottom: 1rem;
+		}
+	}
+	button {
+		@include jcw(space-evenly, $c, $w);
+		text-transform: uppercase;
+		background: #FFFFFF;
+		border: 1px solid #9E9E9E;
+		box-sizing: border-box;
+		width: 106px;
+		height: 30px;
+		margin-left: 2rem;
+	}
+}
+.showMenu {
+	@include jcw($j, $c, $w);
+}
+
+@media (max-width: 1676px) {
+	.header {
+		&__logo, &__menu {
+			margin: 0;
+		}
+		.container {
+			padding: 0 2rem;
+		}
+	}
+}
+@media (max-width: 1200px) {}
+@media (max-width: 992px) {
+	.header {
+		&__menu {
+			display: none;
+		}
+	}
+	.btn-burger {
+		@include jcw($j, $c, $w);
+	}
+}
+@media (max-width: 767px) {
+	.header {
+		&__body {
+			flex-wrap: nowrap;
+		}
+	}
+}

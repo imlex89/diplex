@@ -1,0 +1,92 @@
+.chat {
+	margin-top: -276px;
+	h2 {
+		margin-top: 55px;
+		left: 381px;
+    	position: relative;
+	}
+	&__body {
+		@include jcw($j, flex-start, $w);
+		margin-top: 50px;
+		padding-bottom: 90px;
+	}
+	&__users {
+		margin-right: 30px;
+		ul {
+			li {
+				@include jcw(flex-start, $c, $w);
+				padding: 4px 13px;
+				width: 268px;
+				height: 37px;
+				background: #FFFFFF;
+				border: 1px solid #DADADA;
+				box-sizing: border-box;
+				a {
+					font-weight: bold;
+					font-size: 16px;
+					line-height: 21px;
+					color: #000000;
+				}
+			}
+			.active {
+				background: #E5E5E5;
+				a {
+					color: #0080A3;
+				}
+			}
+		}
+	}
+	&__block {
+		width: 100%;
+		max-width: 880px;
+		form {
+			margin-top: 35px;
+			input, button {
+				height: 42px;
+			}
+			input {
+				width: 550px;
+				background: #FFFFFF;
+				border: 1px solid #9E9E9E;
+				box-sizing: border-box;
+				font-size: 20px;
+				line-height: 26px;
+				color: #C4C4C4;
+				padding-left: 12px;
+			}
+			button {
+				width: 213px;
+				background: #13B709;
+				font-size: 20px;
+				line-height: 26px;
+				color: #FFFFFF;
+				margin-left: 28px;
+			}
+		}
+	}
+	&__list {
+		background: #ECECEC;
+		padding: 46px 43px 34px 54px;
+	}
+	&__text {
+		&:first-child {
+			margin-top: -20px;
+		}
+		div:first-child {
+			@include jcw(flex-start, $c, $w);
+			padding: 20px 0 8px 0;
+			p {
+				margin-left: 15px;
+			}
+		}
+		div:last-child {
+			background: #FFFFFF;
+			margin-left: 62px;
+			p {
+				padding: 20px 4px 20px 31px; 
+			}
+		}
+	}
+}
+.container {
+}
