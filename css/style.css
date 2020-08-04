@@ -413,7 +413,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 .change {
-  padding: 0 305px 0 360px;
+  padding: 0 3rem;
   position: relative;
   background: #E5E5E5;
   padding-bottom: 60px;
