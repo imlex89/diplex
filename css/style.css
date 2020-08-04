@@ -618,6 +618,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .change h2 {
   padding-top: 81px;
+  width: 100%;
+  max-width: 1338px;
+  margin: 0 auto;
 }
 
 .change2 {
